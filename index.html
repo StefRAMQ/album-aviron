@@ -3,97 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { 
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-        margin: 0; 
-        padding: 10px; 
-        /* --- MODIFICATION ICI --- */
-        background-color: #CCCCCC; 
-    }
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            margin: 0; 
+            padding: 10px; 
+            /* La couleur sera appliquée par le script plus bas */
+            transition: background-color 0.3s; 
+        }
 
-    .gallery-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        align-items: start;
-    }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: start;
+        }
 
-    .card {
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.2s;
-    }
+        .card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
 
-    .card:hover { 
-        transform: scale(1.02); /* Petit effet de zoom au survol au lieu de l'opacité */
-    }
+        .card:hover { transform: scale(1.03); }
 
-    .image-wrapper {
-        width: 90%;          /* Passez de 70% à 90% ici */
-        max-width: 350px;    /* Sécurité pour éviter que l'image ne soit trop grande */
-        margin-bottom: 10px; /* Un peu plus d'espace sous l'image */
-    }
+        .image-wrapper {
+            width: 90%; /* Ajusté à 90% comme convenu */
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
 
-    .card img {
-        width: 100%;
-        height: auto;
-        border-radius: 6px;
-        /* --- MODIFICATION ICI (Ombre plus claire pour le fond noir) --- */
-        box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-        display: block;
-        border: 1px solid #333; /* Un petit liseré gris pour détacher l'image */
-    }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: block;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-    .card-title {
-        margin: 0;
-        font-size: 0.9rem;
-        font-weight: 500;
-        text-align: center;
-        /* --- MODIFICATION ICI --- */
-        color: #ffffff; 
-        line-height: 1.2;
-    }
-</style>
+        .card-title {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+            /* La couleur du texte sera gérée par le script selon le fond */
+        }
+    </style>
 </head>
 <body>
 
-    <div class="gallery-container" id="gallery">
-        </div>
+    <div class="gallery-container" id="gallery"></div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
+        
+        // 1. Gestion de la couleur de fond
+        // On récupère "bg" dans l'URL, sinon on met #CCCCCC
+        const bgColor = params.get('bg') ? '#' + params.get('bg') : '#CCCCCC';
+        document.body.style.backgroundColor = bgColor;
+
+        // 2. Gestion intelligente de la couleur du texte
+        // Si le fond est sombre, on met le texte en blanc, sinon en noir
+        const isDark = (color) => {
+            // Logique simplifiée pour détecter si la couleur est sombre
+            if (color === '#000000' || color.toLowerCase() === '#000') return true;
+            return false; 
+        };
+        const textColor = isDark(bgColor) ? '#FFFFFF' : '#333333';
+
+        // 3. Chargement des données
         const albumId = params.get('id');
 
         fetch('albums.json')
             .then(response => response.json())
             .then(data => {
                 const gallery = document.getElementById('gallery');
-                
-                // Filtrage par ID ou affichage complet
-                const itemsToDisplay = albumId 
-                    ? data.filter(a => a.id === albumId) 
-                    : data;
+                const itemsToDisplay = albumId ? data.filter(a => a.id === albumId) : data;
 
                 itemsToDisplay.forEach(album => {
                     const card = document.createElement('a');
                     card.className = 'card';
                     card.href = album.lien;
                     card.target = '_blank';
-
                     card.innerHTML = `
                         <div class="image-wrapper">
                             <img src="${album.image}" alt="${album.titre}">
                         </div>
-                        <h3 class="card-title">${album.titre}</h3>
+                        <h3 class="card-title" style="color: ${textColor}">${album.titre}</h3>
                     `;
                     gallery.appendChild(card);
                 });
-            })
-            .catch(err => console.error("Erreur JSON:", err));
+            });
     </script>
 </body>
 </html>
