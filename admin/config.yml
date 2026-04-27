@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: StefRAMQ/album-aviron
+  branch: main
+
+media_folder: "images" # Où seront stockées les photos de couverture
+public_folder: "images"
+
+collections:
+  - name: "config"
+    label: "Configuration"
+    files:
+      - label: "Liste des Albums"
+        name: "albums"
+        file: "albums.json" # Le fichier qu'il doit modifier
+        fields:
+          - label: "Albums"
+            name: "albums"
+            widget: "list"
+            fields:
+              - {label: "ID (sans espace)", name: "id", widget: "string"}
+              - {label: "Titre de l'album", name: "titre", widget: "string"}
+              - {label: "Image de couverture", name: "image", widget: "image"}
+              - {label: "Lien Google Album", name: "lien", widget: "string"}
