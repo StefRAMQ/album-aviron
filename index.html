@@ -85,17 +85,15 @@
             .then(data => {
                 const gallery = document.getElementById('gallery');
         
-                // --- MODIFICATION ICI ---
-                // Si Decap CMS a créé une clé "albums", on prend data.albums. 
-                // Sinon (pour vos tests manuels), on garde data.
-                const sourceDonnees = data.albums ? data.albums : data;
+                // On cible spécifiquement la liste contenue dans la clé "albums"
+                const sourceDonnees = data.albums; 
         
-                // On filtre maintenant sur la source correcte
+                // On filtre par ID si le paramètre est présent dans l'URL
                 const itemsToDisplay = albumId 
                     ? sourceDonnees.filter(a => a.id === albumId) 
                     : sourceDonnees;
         
-                // On boucle sur itemsToDisplay (qui est bien une liste)
+                // On affiche les photos
                 itemsToDisplay.forEach(album => {
                     const card = document.createElement('a');
                     card.className = 'card';
@@ -109,7 +107,8 @@
                     `;
                     gallery.appendChild(card);
                 });
-            });    
+            })
+            .catch(err => console.error("Erreur de lecture du JSON :", err));
     </script>
 </body>
 </html>
