@@ -25,8 +25,14 @@
       "lien": "https://photos.app.goo.gl/nYVEfT5NVkUZ9npy6"
     },
     {
-      "id": "CulsGelés2025",
-      "titre": "Les Culs Gelés 2025",
+      "id": "Versailles2026",
+      "titre": "Regate de Versailles 2026",
+      "image": "images/663059094_18154367323459765_4646092980555746857_n.jfif",
+      "lien": "https://photos.app.goo.gl/X5XW9wfanjDVjWzQ6"
+    },
+    {
+      "id": "CulsGelés2026",
+      "titre": "Les Culs Gelés 2026",
       "image": "images/IMG_50004 les culs gelés 2025 Low.jpeg",
       "lien": "https://photos.app.goo.gl/Qk13nm5gLTchddtM9"
     },
@@ -35,12 +41,6 @@
       "titre": "Sedan 2025",
       "image": "images/DSC04613 Sedan 2025 Low.JPG",
       "lien": "https://photos.app.goo.gl/5raahFnLFCS21Dbi8"
-    },
-    {
-      "id": "Versailles2026",
-      "titre": "Regate de Versailles 2026",
-      "image": "images/663059094_18154367323459765_4646092980555746857_n.jfif",
-      "lien": "https://photos.app.goo.gl/X5XW9wfanjDVjWzQ6"
     }
   ]
 }
