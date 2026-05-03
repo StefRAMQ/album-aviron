@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Chamouille2026",
+      "titre": "Stage de Pâques à Chamouille 2026",
+      "lien": "https://photos.app.goo.gl/Z5LjzJzKQW8SfpVW6",
+      "image": "images/page-de-garde.jpg"
+    },
+    {
       "id": "Dordogne2026",
       "titre": "Pelle de la dordogne 2026",
       "image": "images/pelle-dordogne.jpg",
