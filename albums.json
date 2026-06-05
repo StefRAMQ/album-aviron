@@ -1,8 +1,14 @@
 {
   "albums": [
     {
+      "id": "StageSkiffAydat2026",
+      "titre": "Stage Skiff Lac d'Aydat 2026",
+      "image": "images/whatsapp-image-2026-05-22-at-18.09.49-1-.jpeg",
+      "lien": "https://photos.app.goo.gl/mdJVQ6DuLwUfo5Dh8"
+    },
+    {
       "id": "Saar2026",
-      "titre": "Rencontre Hameln  sur la Saar 2026",
+      "titre": "Rencontre avec Hameln sur la Saar 2026",
       "image": "images/whatsapp-image-2026-05-24-at-17.13.15.jpeg",
       "lien": "https://photos.app.goo.gl/yzGjgnw72WzNxKPZA"
     },
