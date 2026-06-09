@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Rance2026",
+      "titre": "Rando Rance 2026",
+      "image": "images/whatsapp-image-2026-06-08-at-10.00.58-1-.jpeg",
+      "lien": "https://photos.app.goo.gl/hAm8m2RJ1WC5GTN88"
+    },
+    {
       "id": "StageSkiffAydat2026",
       "titre": "Stage Skiff Lac d'Aydat 2026",
       "image": "images/whatsapp-image-2026-05-22-at-18.09.49-1-.jpeg",
