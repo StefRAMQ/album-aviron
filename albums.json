@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "GorgesLoire2026",
+      "titre": "Rando Gorges de la Loire 2026",
+      "image": "images/img-20260613-wa0032.jpg",
+      "lien": "https://photos.app.goo.gl/jFYbsLpQPJ3NT5WCA"
+    },
+    {
       "id": "Rance2026",
       "titre": "Rando Rance 2026",
       "image": "images/whatsapp-image-2026-06-08-at-10.00.58-1-.jpeg",
