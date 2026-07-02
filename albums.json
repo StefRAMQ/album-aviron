@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Embrun2026",
+      "titre": "Rando Embrun Lac de Serre Ponçon 2026",
+      "image": "images/embrun-img-20260629-wa0010.jpg",
+      "lien": "https://photos.app.goo.gl/4TKYsFVmeLbyeFqVA"
+    },
+    {
       "id": "Saintongeaise2026",
       "titre": "Saintongeaise 2026",
       "lien": "https://photos.app.goo.gl/zunuvmSHCxfW4m927",
