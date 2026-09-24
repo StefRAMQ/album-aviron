@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Weybridge2026",
+      "titre": "Weybridge UK 2026",
+      "image": "images/weybridge-2026.jpg",
+      "lien": "https://photos.app.goo.gl/LbEgfbdTCWfgcNfdA"
+    },
+    {
       "id": "Finlande2026",
       "titre": "Finlande Sulkava Suursoudut 2026",
       "image": "images/vignette-sulkava-2026.jpg",
