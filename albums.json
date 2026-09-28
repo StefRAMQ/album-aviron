@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Traversée2026",
+      "titre": "Traversée de Paris 2026",
+      "image": "images/traversée-2026.jpeg",
+      "lien": "https://photos.app.goo.gl/sQTQo45PmwY7BjxT8"
+    },
+    {
       "id": "Chasselas2026",
       "titre": "Rando du Chasselas 2026",
       "image": "images/chasselas-img-20260927-wa0001.jpg",
