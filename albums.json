@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Chasselas2026",
+      "titre": "Rando du Chasselas 2026",
+      "image": "images/chasselas-img-20260927-wa0001.jpg",
+      "lien": "https://photos.app.goo.gl/fsgC2Zrh3NAJqjd96"
+    },
+    {
       "id": "Weybridge2026",
       "titre": "Weybridge UK 2026",
       "image": "images/weybridge-2026.jpg",
