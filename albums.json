@@ -1,6 +1,12 @@
 {
   "albums": [
     {
+      "id": "Annecy2026",
+      "titre": "Rand'Eau Annecy 2026",
+      "lien": "https://photos.app.goo.gl/VWUYQ1Qx1hHwG3MHA",
+      "image": "images/annecy2026.jpg"
+    },
+    {
       "id": "Lerins2026",
       "titre": "Iles de Lérins - Cannes 2026",
       "image": "images/img_3464.jpeg",
