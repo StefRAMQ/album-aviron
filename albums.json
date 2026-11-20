@@ -1,6 +1,24 @@
 {
   "albums": [
     {
+      "id": "FontainebleauCompet2026",
+      "titre": "Régate du pays de Fontainebleau 2026",
+      "lien": "https://photos.app.goo.gl/JyCKhzWJukYWqwF48",
+      "image": "images/fontaineableau-2026.jpg"
+    },
+    {
+      "id": "Damala2026",
+      "titre": "Damala 2026",
+      "lien": "https://photos.app.goo.gl/TEGADn6rnA1DVPy1A",
+      "image": "images/damala-2026-mini.jpg"
+    },
+    {
+      "id": "PJ1 2026",
+      "titre": "PJ1 2026",
+      "lien": "https://photos.app.goo.gl/v8cfjBc7X9QRBqZE8",
+      "image": "images/pj1-2026-mini.jpg"
+    },
+    {
       "titre": "Stage de Toussaint Oct 2026 ",
       "id": "StageToussaint2026",
       "image": "images/jeune-stage-toussaint-2026.jpg",
